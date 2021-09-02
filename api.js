@@ -1,6 +1,7 @@
 const searchField = document.getElementById('search-field');
 const searchResult =document.getElementById('search-result');
 const input = document.getElementById('snackbar');
+const getinput = document.getElementById('getInput');
 const searchFood=()=>{
     const searchText =searchField.value;
     searchField.value= "";
@@ -24,12 +25,14 @@ const displaySearchResult=books=>{
    let  text = "please input valid value "
    searchResult.textContent="";
    input.textContent="";
-
+   getinput.innerHTML="";
+   
    if(books==null){
     input.innerHTML=text;
    } 
    else{
     books.forEach(book=> {
+      getinput.innerHTML = ` total book: ${books.length}`;
       const div = document.createElement('div');
       div.classList.add('col');
       div.innerHTML=`
@@ -38,8 +41,8 @@ const displaySearchResult=books=>{
       <div class="card-body">
         <h5 class="card-title">${book.title}</h5>
         <p class="card-text">author name:${book.author_name}</p>
+        <p class="card-text">publisher name:${book.publisher}</p>
         <p class="card-text">fast publish date :${book.first_publish_year}</p>
-        <p class="card-text">publish year:${book.publish_year}</p>
       </div>
     </div>
       
