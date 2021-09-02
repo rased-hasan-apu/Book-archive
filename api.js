@@ -21,7 +21,7 @@ const searchFood=()=>{
 
 const displaySearchResult=books=>{
    let  text = "please input valid value "
-   searchResult.textContent="";
+   searchResult.innerHTML="";
    input.textContent="";
 
    if(books==null){
