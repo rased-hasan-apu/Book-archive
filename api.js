@@ -29,7 +29,7 @@ const displaySearchResult=books=>{
    } 
    else{
     books.forEach(book=> {
-      const cover_i = searchResult.value;
+      const cover_i = searchField.value;
       const div = document.createElement('div');
       div.classList.add('col');
       div.innerHTML=`
