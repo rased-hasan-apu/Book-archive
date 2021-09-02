@@ -1,12 +1,11 @@
 const searchField = document.getElementById('search-field');
 const searchResult =document.getElementById('search-result');
-const input = document.getElementById('snackbar');
 const getinput = document.getElementById('getInput');
 const searchFood=()=>{
     const searchText =searchField.value;
     searchField.value= "";
     let  text = "please input value"
-    input.textContent="";
+    getinput.textContent="";
     if(searchText ===''){
       input.innerHTML=text;
 
@@ -28,7 +27,7 @@ const displaySearchResult=books=>{
    getinput.innerHTML="";
    
    if(books===null){
-    input.innerHTML=text;
+    getinput.innerHTML=text;
    } 
    else{
     books.forEach(book=> {
