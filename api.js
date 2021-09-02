@@ -19,6 +19,7 @@ const searchFood=()=>{
     
 }
 
+
 const displaySearchResult=books=>{
    let  text = "please input valid value "
    searchResult.textContent="";
@@ -29,6 +30,7 @@ const displaySearchResult=books=>{
    } 
    else{
     books.forEach(book=> {
+     const cover_i =  searchField.value;
       const div = document.createElement('div');
       div.classList.add('col');
       div.innerHTML=`
