@@ -6,7 +6,7 @@ const searchFood=()=>{
     searchField.value= "";
     let  text = "please input value"
     input.textContent="";
-    if(searchText ==''){
+    if(searchText ===''){
       input.innerHTML=text;
 
     }
@@ -24,7 +24,7 @@ const displaySearchResult=books=>{
    let  text = "please input valid value "
    searchResult.textContent="";
    input.textContent="";
-   if(books==null){
+   if(books.length===0){
     input.innerHTML=text;
    } 
    else{
