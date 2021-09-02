@@ -30,12 +30,11 @@ const displaySearchResult=books=>{
    } 
    else{
     books.forEach(book=> {
-     const cover_i =  searchField.value;
       const div = document.createElement('div');
       div.classList.add('col');
       div.innerHTML=`
       <div " class="card h-100 ">
-      <img src= "https://covers.openlibrary.org/b/id/${cover_i}-M.jpg" class="card-img-top" alt="...">
+      <img src= "https://covers.openlibrary.org/b/id/${book.cover_i}-M.jpg" class="card-img-top" alt="...">
       <div class="card-body">
         <h5 class="card-title">${book.title}</h5>
         <p class="card-text">author name:${book.author_name}</p>
